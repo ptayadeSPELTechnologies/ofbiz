@@ -1,0 +1,154 @@
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-screen.xsd">
+ 
+  	<screen name="header">
+ 		<section>
+ 			<widgets>
+ 				<platform-specific><html><html-template location="component://greenfire/webapp/greenfire/includes/header.ftl"/></html></platform-specific>
+ 			</widgets>
+ 		</section>
+ 	</screen>
+ 	
+ 	
+ 	 <screen name="footer">
+ 		<section>
+ 			<widgets>
+ 				<platform-specific><html><html-template location="component://greenfire/webapp/greenfire/includes/footer.ftl"/></html></platform-specific>
+ 			</widgets>
+ 		</section>
+ 	</screen>
+ 	
+     <screen name="xhtml-decorator">
+    	<section>
+    		<widgets>
+    			<include-screen name="header"/>
+    			<decorator-section-include name="title"/>
+    			<decorator-section-include name="body"/>
+    			<include-screen name="footer"/>
+    		</widgets>
+    	</section>
+    </screen>
+    
+ 	<screen name="ListFormScreen">
+ 		<section>
+ 			<actions>
+ 				<set field="row1.firstName" value="First1"/>
+ 				<set field="row1.lastName" value="Last1"/>
+ 				<set field="row2.firstName" value="First2"/>
+ 				<set field="row2.lastName" value="Last2"/>
+ 				<set field="row3.firstName" value="First3"/>
+ 				<set field="row3.lastName" value="Last3"/>
+ 				<set field="listOfRecords[]" from-field="row1"/>
+ 				<set field="listOfRecords[]" from-field="row2"/>
+ 				<set field="listOfRecords[]" from-field="row3"/>
+ 			</actions>
+ 			
+ 			<widgets>
+ 				<decorator-screen name="xhtml-decorator">
+ 					<decorator-section name="title">
+ 						<label text="A Screen with a list of forms."/>
+ 					</decorator-section>
+ 					
+ 					<decorator-section name="body">
+ 						<include-form name="ListForm" location="component://greenfire/widget/LearningForms.xml"/>
+ 						<include-screen name="ShowProcessing"/>
+ 					</decorator-section>
+ 				</decorator-screen>
+ 			</widgets>
+ 		</section>
+ 	</screen>
+ 	
+ 	<screen name="ShowProcessing">
+ 	<section>
+ 	<condition><not><if-empty field="parameters.submit"/></not></condition>
+ 	
+ 		<widgets>
+ 			<container><label text="firstName: ${parameters.firstName_o_0}"  /></container>
+ 			<container><label text="lastName: ${parameters.lastName_o_0}"/></container>
+ 			<container><label text="firstName: ${parameters.firstName_o_1}"  /></container>
+ 			<container><label text="lastName: ${parameters.lastName_o_1}"/></container>
+ 			<container><label text="firstName: ${parameters.firstName_o_2}"  /></container>
+ 			<container><label text="lastName: ${parameters.lastName_o_2}"/></container>
+ 			<container><label text="submit: ${parameters.submit}"/></container>
+ 			<container><label text="All parameters were received:"/></container>
+ 			<container><label text="${parameters.allParams}"/></container>
+ 		</widgets>
+ 	</section>
+ 	</screen>
+ 	
+ 	<screen name="MultiFormScreen">
+ 	<section>
+ 	
+ 		<actions>
+ 			<script location="component://greenfire/webapp/greenfire/WEB-INF/actions/loadListOfSampleData.bsh"/>
+  		</actions>
+  		
+  		<widgets>
+  		
+  			<decorator-screen name="xhtml-decorator">
+  			<decorator-section name="title">
+  			<label text="A screen with a multi type form"/>
+  			</decorator-section>
+  			
+  			<decorator-section name="body">
+  			<include-form name="MultiForm" location="component://greenfire/widget/LearningForms.xml"/>
+  				<include-screen name="ShowProcessing"/>
+ 					</decorator-section>
+ 				</decorator-screen>
+ 			</widgets>
+ 		</section>
+ 	</screen>
+ 	
+ 	<screen name="TwoTargetFormScreen">
+ 	<section>
+ 	
+ 		<!--   <actions>
+ 			<entity-one entity-name="Person" value-name="record"/>
+  		</actions> -->
+  		
+  		<widgets>
+  		
+  			<decorator-screen name="xhtml-decorator">
+  			<decorator-section name="title">
+  			<label text="A screen with a 2-target form."/>
+  			</decorator-section>
+  			
+  			<decorator-section name="body">
+  			<include-form name="TwoTargetForm" location="component://greenfire/widget/LearningForms.xml"/>
+  				<include-screen name="ShowProcessing"/>
+ 					</decorator-section>
+ 				</decorator-screen>
+ 			</widgets>
+ 		</section>
+ 	</screen>
+  		
+  		
+  <screen name="RowMutatingFormScreen">
+ 		<section>
+ 			<actions>
+ 				<set field="row1.firstName" value="First1"/>
+ 				<set field="row1.lastName" value="Last1"/>
+ 				<set field="row2.firstName" value="First2"/>
+ 				<set field="row2.lastName" value="Last2"/>
+ 				<set field="row3.firstName" value="First3"/>
+ 				<set field="row3.lastName" value="Last3"/>
+ 				<set field="listOfRecords[]" from-field="row1"/>
+ 				<set field="listOfRecords[]" from-field="row2"/>
+ 				<set field="listOfRecords[]" from-field="row3"/>
+ 			</actions>
+ 			
+ 			<widgets>
+ 				<decorator-screen name="xhtml-decorator">
+ 					<decorator-section name="title">
+ 						<label text="A Screen with a list of forms."/>
+ 					</decorator-section>
+ 					
+ 					<decorator-section name="body">
+ 						<include-form name="RowMutatingForm" location="component://greenfire/widget/LearningForms.xml"/>
+ 						<include-screen name="ShowProcessing"/>
+ 					</decorator-section>
+ 				</decorator-screen>
+ 			</widgets>
+ 		</section>
+ 	</screen>
+ </screens>

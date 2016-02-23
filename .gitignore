@@ -1,47 +1,49 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
+applications/*/build
+framework/*/build
+framework/base/lib/cobertura-*.jar
+framework/base/lib/asm*.jar
+framework/base/lib/oro*.jar
+framework/entity/lib/jdbc/*.jar
+!framework/entity/lib/jdbc/derby*.jar
+hot-deploy/*/build
+specialpurpose/*/build
+applications/content/index/
+bin/
+ofbiz.jar
+changelog
+runtime/git-rebase/*
+runtime/svninfo.ftl
+runtime/gitinfo.ftl
+runtime/test-list-build.xml
+runtime/logs/access_log.*
+runtime/logs/cobertura-base.dat
+runtime/logs/cobertura-components.dat
+runtime/logs/cobertura-report
+runtime/logs/*.log*
+runtime/logs/*.html*
+runtime/logs/test-results/*
+/runtime/logs/birt
+runtime/data/derby/*
+runtime/data/utilcache.*
+runtime/catalina/work/*
+runtime/tempfiles/*
+!runtime/tempfiles/README
+runtime/indexes/products/
+themes/flatgrey/webapp/flatgrey/javascript-min.css
+themes/flatgrey/webapp/flatgrey/js/application-min.js
+themes/flatgrey/webapp/flatgrey/maincss-min.css
+themes/flatgrey/webapp/flatgrey/mainrtl-min.css
+.pc
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+desktop.ini
+.idea
+*.iml
+*.ipr
+*.iws
+*~
+*#
+.*.swp
+.*.swo
+*.patch
+.settings
+.groovy

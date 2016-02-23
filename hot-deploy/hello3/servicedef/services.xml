@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.ofbiz.org/dtds/services.xsd"
+	<description> Hello 3 services</description>
+
+<service name="createHelloPersonHobby" engine="simple"
+	location="org/ofbiz/hello3/Hello3Services.xml" invoke="createHelloPersonHobby">
+	<description>Create a HelloPersonHobby which links a person and a hobby</description>
+	<auto-attributes mode="IN" entity-name="HelloPersonHobby" include="pk" optional="false"/>
+	</service>
+</services>

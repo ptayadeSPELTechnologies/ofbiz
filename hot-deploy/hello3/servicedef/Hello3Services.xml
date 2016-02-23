@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<simple-methods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.ofbiz.org/dtds/simple-methods.xsd">
+	<simple-method method-name="createHelloPersonHobby" short-description="Create a Hobby-Person relationship"
+	login-required="false">
+	<make-value entity-name="HelloPersonHobby" value-name="newEntity"/>
+	<set-nonpk-fields map-name="parameters" value-name="newEntity"/>
+	<set-pk-fields map-name="parameters" value-name="newEntity"/>
+	<create-value value-name="newEntity"/>
+	</simple-method>
+</simple-methods>

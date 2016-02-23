@@ -1,0 +1,12 @@
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-screen.xsd">
+ 
+	<screen name="editcontactmech.extend">
+		<section>
+		<widgets>
+		<platform-specific><html><html-template location="component://hello2/webapp/partymgr/editcontactmech.extend.ftl"/></html></platform-specific>
+		</widgets>
+		</section>
+	</screen>
+	
+	</screens>

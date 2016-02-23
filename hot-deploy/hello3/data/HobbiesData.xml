@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+	<HelloHobby helloHobbyId="READING" description="Reading"/>
+	<HelloHobby helloHobbyId="MOVIES" description="Movies"/>
+	<HelloHobby helloHobbyId="THEATRE" description="The theatre"/>
+	<HelloHobby helloHobbyId="OPERA" description="The opera"/>
+</entity-engine-xml>
+	
