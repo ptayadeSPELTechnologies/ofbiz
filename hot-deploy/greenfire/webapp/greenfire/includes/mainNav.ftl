@@ -20,7 +20,8 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
+	<!--- for web accessibility---->
+	<script src="/greenfire/js/access.js"></script>
 </head>
 
 
@@ -57,13 +58,15 @@ nav.horizontal > ul > li {
 </style>
 
 <body>
-     <a href="#main">Skip and Go to Main Content</a>
-     <nav class="horizontal">
-        <ul>
-          <li><a href="index">Book</a></li> |
-          <!--<li><a href="tutorial1">Tutorial</a></li> |-->
-          <li><a href="">Practice</a></li>
-        </ul>
-    </nav>  
+     <a id="skipToMainContent" des="click this link to skip the navigation and go to main content">Skip and Go to Main Content</a>
+	 <section id="mainNav" >
+		 <nav class="horizontal">
+			<ul>
+			  <li><a href="index">Book</a></li> |
+			  <!--<li><a href="tutorial1">Tutorial</a></li> |-->
+			  <li><a href="">Practice</a></li>
+			</ul>
+		</nav>  
+	</section>
 
 

@@ -5,8 +5,7 @@
 
 
 
-<main id="main">
-  <section >
+  <section id="main">
       <p>Merscythe sees the words “IDENTIFY YOURSELF” on the screen in the lab. He types in his <kbd>name</kbd> and this information is read by the program; this is known as giving input to a program. The program then displays <samp>“Hello, Merscythe”</samp> on the screen- this is called program output. In this tutorial, you will learn how to make a program interactive through input and output so that it can read the data the user types in and display information to the user. To do so, two functions that are built into the language called input and print are used. Functions are similar to methods in that they also used to perform tasks. However, there are differences between the two and we will discuss these later.</p>
 <p>The function print is used to display information on the screen when the program runs. For example, to display Merscythe’s name, you will write the following statement in the editor and run the program:</br>
 <code>print ‘Merscythe’</code></br>
@@ -34,4 +33,3 @@ print day_of_week</pre></p>
 <p>When you run this program, it will prompt you to enter your favorite day of week. You will type in your choice on the keyboard (say, Tuesday) and press the Enter key. Then, this text you have typed in will be read by the program and stored in the variable day_of_week. Finally, the print statement will display the value of the variable on the screen. </br> 
 This concludes the tutorial. </p>
     </section>
-</main>
